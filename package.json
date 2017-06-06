@@ -1,0 +1,28 @@
+{
+  "name": "mini-hackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-wrap-in-js": "^1.1.1",
+    "glob": "^7.1.2",
+    "next": "^3.0.0-beta10",
+    "node-sass": "^4.5.3",
+    "normalize.css": "^7.0.0",
+    "postcss-easy-import": "^2.1.0",
+    "postcss-loader": "^2.0.5",
+    "raw-loader": "^0.5.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "sass-loader": "^6.0.5"
+  }
+}
