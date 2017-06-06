@@ -2,9 +2,9 @@
   "name": "mini-hackathon",
   "version": "1.0.0",
   "description": "",
-  "main": "login.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "./node_modules/.bin/nodemon --ignore .next/ server.js",
+    "dev": "./node_modules/.bin/nodemon --ignore .next/ -w server.js",
     "build": "next build",
     "start": "next start"
   },
