@@ -2,7 +2,7 @@
   "name": "mini-hackathon",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "login.js",
   "scripts": {
     "dev": "./node_modules/.bin/nodemon --ignore .next/ server.js",
     "build": "next build",
