@@ -4,10 +4,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _extends2 = require('babel-runtime/helpers/extends');
-
-var _extends3 = _interopRequireDefault(_extends2);
-
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -44,6 +40,10 @@ var _Footer = require('../components/Footer/Footer');
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
+var _Login = require('../components/Login/Login');
+
+var _Login2 = _interopRequireDefault(_Login);
+
 var _head = require('next/dist/lib/head.js');
 
 var _head2 = _interopRequireDefault(_head);
@@ -68,39 +68,29 @@ var Index = function (_Component) {
             return _react2.default.createElement('div', {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 11
+                    lineNumber: 12
                 }
             }, _react2.default.createElement(_head2.default, {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 12
-                }
-            }, _react2.default.createElement('link', { rel: 'stylesheet', href: '../static/css/style.css', __source: {
-                    fileName: _jsxFileName,
                     lineNumber: 13
                 }
-            })), _react2.default.createElement('div', { className: 'app', __source: {
+            }, _react2.default.createElement('link', { rel: 'stylesheet', href: '../static/css/simple-line-icons.css', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 14
+                }
+            }), _react2.default.createElement('link', { rel: 'stylesheet', href: '../static/css/style.css', __source: {
                     fileName: _jsxFileName,
                     lineNumber: 15
                 }
-            }, _react2.default.createElement(_Header2.default, {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 16
-                }
-            }), _react2.default.createElement('div', { className: 'app-body', __source: {
+            })), _react2.default.createElement('div', { className: 'app', __source: {
                     fileName: _jsxFileName,
                     lineNumber: 17
                 }
-            }, _react2.default.createElement(_Sidebar2.default, (0, _extends3.default)({}, this.props, {
+            }, _react2.default.createElement(_Login2.default, {
                 __source: {
                     fileName: _jsxFileName,
                     lineNumber: 18
-                }
-            }))), _react2.default.createElement(_Footer2.default, {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 20
                 }
             })));
         }
