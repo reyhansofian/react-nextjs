@@ -14,6 +14,7 @@ app.prepare()
       server.get('/b', (req, res) => app.render(req, res, '/a', req.query));
 
       server.get('*', (req, res) => handle(req, res));
+      
 
       server.listen(3000, (err) => {
         if (err) throw err;
