@@ -2,9 +2,9 @@
   "name": "mini-hackathon",
   "version": "1.0.0",
   "description": "",
-  "main": "login.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "next",
+    "dev": "./node_modules/.bin/nodemon --ignore .next/ -w server.js",
     "build": "next build",
     "start": "next start"
   },
@@ -14,15 +14,29 @@
   "dependencies": {
     "babel-plugin-module-resolver": "^2.7.1",
     "babel-plugin-wrap-in-js": "^1.1.1",
+    "express": "^4.15.3",
     "glob": "^7.1.2",
     "next": "^3.0.0-beta10",
     "node-sass": "^4.5.3",
     "normalize.css": "^7.0.0",
+    "orm": "^3.2.3",
     "postcss-easy-import": "^2.1.0",
     "postcss-loader": "^2.0.5",
     "raw-loader": "^0.5.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "sass-loader": "^6.0.5"
+    "sass-loader": "^6.0.5",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-flowtype": "^2.34.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "nodemon": "^1.11.0"
   }
 }
