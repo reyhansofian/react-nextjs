@@ -34,7 +34,7 @@ var _link2 = _interopRequireDefault(_link);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/vicz/Projects/Research/embreo/mini-hackathon/components/Sidebar/Sidebar.js';
+var _jsxFileName = '/Users/batugue/Documents/dwoo/embreo/react-nextjs/react-nextjs/components/Sidebar/Sidebar.js';
 
 
 var Sidebar = function (_Component) {

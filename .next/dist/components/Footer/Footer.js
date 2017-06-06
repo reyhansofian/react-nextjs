@@ -30,7 +30,7 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = "/Users/vicz/Projects/Research/embreo/mini-hackathon/components/Footer/Footer.js";
+var _jsxFileName = "/Users/batugue/Documents/dwoo/embreo/react-nextjs/react-nextjs/components/Footer/Footer.js";
 
 
 var Footer = function (_Component) {

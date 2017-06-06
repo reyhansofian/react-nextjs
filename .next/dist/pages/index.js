@@ -50,7 +50,7 @@ var _head2 = _interopRequireDefault(_head);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/vicz/Projects/Research/embreo/mini-hackathon/pages/index.js?entry';
+var _jsxFileName = '/Users/batugue/Documents/dwoo/embreo/react-nextjs/react-nextjs/pages/index.js?entry';
 
 
 var Index = function (_Component) {
