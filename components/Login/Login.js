@@ -1,7 +1,57 @@
 import React, { Component } from 'react';
 
+
 class Login extends Component {
+
+  constructor(props) {
+      super(props);
+
+      this.state = {
+         username: '',
+         password: ''
+      }
+
+      this.onSubmit = this.onSubmit.bind(this);
+      this.onChange = this.onChange.bind(this);
+   };
+
+  onSubmit(e){
+   fetch('/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username: this.state.username,
+        password: this.state.password,
+      })
+    })
+   .then(function(response){
+      if (response.status >= 400) {
+        throw new Error("Bad response from server");
+      }
+      return response.json();
+   })
+   .then(function(json){
+      if(json.status == 'success'){
+        alert('success boss');
+      }
+      else{
+        alert('fail boss');
+      }
+   })
+  }
+
+   onChange(e){
+      this.setState({ [e.target.name]: e.target.value });
+      console.log('username > '+ this.state.username);
+      console.log('password > '+ this.state.password);
+   }
+
+
+
   render() {
+    const { username, password } = this.state;
     return (
       <div className="app flex-row align-items-center">
         <div className="container">
@@ -14,15 +64,15 @@ class Login extends Component {
                     <p className="text-muted">Sign In to your account</p>
                     <div className="input-group mb-3">
                       <span className="input-group-addon"><i className="icon-user"></i></span>
-                      <input type="text" className="form-control" placeholder="Username"/>
+                      <input type="text" className="form-control" name="username" value={username} onChange={this.onChange} placeholder="Username"/>
                     </div>
                     <div className="input-group mb-4">
                       <span className="input-group-addon"><i className="icon-lock"></i></span>
-                      <input type="password" className="form-control" placeholder="Password"/>
+                      <input type="password" className="form-control" name="password" value={password} onChange={this.onChange} placeholder="Password"/>
                     </div>
                     <div className="row">
                       <div className="col-6">
-                        <button type="button" className="btn btn-primary px-4">Login</button>
+                        <button type="button" className="btn btn-primary px-4" onClick={this.onSubmit}>Login</button>
                       </div>
                       <div className="col-6 text-right">
 
