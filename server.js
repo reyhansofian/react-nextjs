@@ -1,4 +1,6 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const session = require('express-session');
 const next = require('next');
 const orm = require('orm');
 
@@ -13,7 +15,10 @@ let server;
 app.prepare()
     .then(() => {
       server = express();
-
+  
+      server.use(bodyParser.json());
+      server.use(bodyParser.urlencoded({extended: true}));
+      
       return new Promise((resolve, reject) => {
       // Before we can set up authentication routes we need to set up a database
       orm.connect(process.env.DB_CONNECTION_STRING, function (err, db) {
@@ -49,6 +54,22 @@ app.prepare()
     server.get('/a', (req, res) => app.render(req, res, '/b', req.query));
 
     server.get('/b', (req, res) => app.render(req, res, '/a', req.query));
+    
+    server.post('/login', (req, res) => {
+      let User = db.models.user;
+      let status = "error";
+
+      User.find({or:[{username: req.body.username}, {email: req.body.email}]}, 1, function(err, user){
+        if (user[0]) {
+          if (user[0].password == req.body.password) {
+            status = "success";
+          }
+          // logic for session
+        }
+        res.send({status:status});
+      });
+
+    });
 
     server.get('*', (req, res) => handle(req, res));
 
